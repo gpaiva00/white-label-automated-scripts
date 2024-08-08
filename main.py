@@ -1,9 +1,9 @@
 import os
 from config import *
-from scripts.git_operations import clone_repo, create_branch, commit_changes, push_changes
-from scripts.image_operations import create_splash_screen
-from scripts.file_operations import ensure_dir_exists, replace_file
-from scripts.aws_operations import download_from_s3, upload_to_s3
+from scripts.git_operations import *
+from scripts.image_operations import *
+from scripts.file_operations import *
+from scripts.aws_operations import *
 
 def main():
     print("starting process...")
@@ -47,7 +47,7 @@ def main():
     upload_to_s3(LOCAL_SPLASH_OUTPUT_PATH, f"{CLIENTE_NAME}/splash.png")
 
     # Limpa arquivos temporários
-    os.system(f"rm -rf {LOCAL_TEMP_DIR}")
+    clear_dir(LOCAL_TEMP_DIR)
 
     print("process completed successfully.")
 

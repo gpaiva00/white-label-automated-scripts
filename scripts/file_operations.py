@@ -10,6 +10,6 @@ def ensure_dir_exists(directory):
         os.makedirs(directory)
         print(f"directory {directory} created successfully.")
 
-def clear_temp_dir(LOCAL_TEMP_DIR):
-    shutil.rmtree(LOCAL_TEMP_DIR)
-    print("temporary directory deleted successfully.")
+def clear_dir(directory):
+    shutil.rmtree(directory)
+    print(f"directory {directory} deleted successfully.")
